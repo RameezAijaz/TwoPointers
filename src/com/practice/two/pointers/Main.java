@@ -122,5 +122,35 @@ public class Main {
         int diff = TripletFromUnsortedArrayWithClosestSumToTarget.closestSumDifference(arr, target);
         System.out.println("TRIPLETS IN "+ Arrays.toString(arr)+" THAT HAS CLOSEST SUM TO "+target);
         System.out.println(diff);
+/*
+        Given an array arr of unsorted numbers and a target sum, count all triplets in it such that arr[i] + arr[j] + arr[k] < target where i, j, and k are three different indices. Write a function to return the count of such triplets.
+
+        Example 1:
+
+        Input: [-1, 0, 2, 3], target=3
+        Output: 2
+        Explanation: There are two triplets whose sum is less than the target: [-1, 0, 3], [-1, 0, 2]*/
+
+        arr = new int[]{-1, 4, 2, 1, 3};
+        target=5;
+
+        int count = CountOfTrippletWithSumLessThanTarget.findCount(arr, target);
+        System.out.println("COUNT OF TRIPLETS WITH SUM LESS THAN "+ target +" IN "+Arrays.toString(arr));
+        System.out.println(count);
+
+/*
+        Given an array with positive numbers and a target number, find all subarrays in it whose product is less than the target number.
+
+        Example 1:
+
+        Input: [2, 5, 3, 10], target=30
+        Output: [2], [5], [2, 5], [3], [5, 3], [10]
+        Explanation: There are six subarrays whose product is less than the target.*/
+
+        ArrayList<Integer> arrList = new ArrayList<>(Arrays.asList(8, 2, 6, 5));
+        target=50;
+        List<List<Integer>> list =AllSubArraysWithProductLessThanTarget.findSubArrays(arrList, target);
+        System.out.println("SUBARRAY OF "+ arrList +" WITH PRODUCT LESS THAN "+target);
+        System.out.println(list);
     }
 }
